@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer } from 'react';
 import HooksAppHeader from './HooksAppHeader';
 import HooksAppCount from './HooksAppCount';
 
@@ -11,14 +11,12 @@ const myReducer = (myState, myAction) => {
         count: myState.count + 1,
         darktheme: !myState.darktheme
       };
-      break;
     }
     case 'bigwords': {
       return {
         ...myState,
         bigwords: !myState.bigwords
       };
-      break;
     }
     default: {
       return myState;
